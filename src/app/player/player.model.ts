@@ -1,5 +1,6 @@
 export class Player {
-    name: string;
+    first_name: string;
+    last_name: string;
     team: string;
     position: string;
     overall: number;

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
+import { Team } from './team.model';
+import { Player } from '../player/player.model';
 
 @Component({
   selector: 'app-team',
@@ -6,11 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team.component.css']
 })
 export class TeamComponent implements OnInit {
-  teamName: string = 'Warriors';
-  teamLocation: string= 'Golden State'
-  offensiveRating: number = 90;
-  defensiveRating: number = 90;
-  overallRating: number = 90;
+  @Input('team') team: Team;
+
   constructor() { }
 
   ngOnInit() {
