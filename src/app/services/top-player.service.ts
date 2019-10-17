@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PlayerListComponent } from './player-list/player-list.component';
+import { PlayerListComponent } from '../player-list/player-list.component';
 import { Observable } from 'rxjs';
 
 @Injectable({

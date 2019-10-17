@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Player } from '../player/player.model';
-import { DataService } from '../data.service';
+import { Player } from '../model/player.model';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-player-list',

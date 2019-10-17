@@ -1,7 +1,7 @@
 export class Player {
     first_name: string;
     last_name: string;
-    team: string;
+    team_name: string;
     position: string;
     overall: number;
 }

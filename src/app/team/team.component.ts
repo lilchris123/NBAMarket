@@ -1,6 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { Team } from './team.model';
-import { Player } from '../player/player.model';
+import { Team } from '../model/team.model';
+import { Player } from '../model/player.model';
 
 @Component({
   selector: 'app-team',

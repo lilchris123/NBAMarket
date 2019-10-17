@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerListComponent } from '../player-list/player-list.component';
-import { TopPlayerService } from '../top-player.service';
-import { Player} from '../player/player.model';
+import { TopPlayerService } from '../services/top-player.service';
+import { Player} from '../model/player.model';
 
 @Component({
   selector: 'app-top-players',

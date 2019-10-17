@@ -4,4 +4,6 @@
         <p><b>Offensive Rating: </b>{{team.offensiveRating}}</p>
         <p><b>Defensive Rating: </b>{{team.defensiveRating}}</p>
         <p><b>Overall: </b>{{team.overallRating}}</p>
+        <p><b>Players:</b></p>
+        <p *ngFor="let p of team.players">{{p.first_name}} {{p.last_name}}</p>
     </div>
