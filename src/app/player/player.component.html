@@ -1,6 +1,11 @@
-<div class="ml-3 p-3">
+<div class="Border ml-3 p-3">
+    <div>
     <h3 class="display-4"> {{player.first_name}} {{player.last_name}}</h3>
     <p><b>Team: </b> {{player.team_name}}</p>
     <p><b>Position: </b>{{player.position}}</p>
     <p><b>Overall: </b>{{player.overall}}</p>
+    </div>
+    <div>
+        <app-purchase-item [price]="15"></app-purchase-item>
+    </div>
 </div>

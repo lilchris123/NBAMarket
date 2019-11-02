@@ -1,15 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { first } from 'rxjs/operators';
-
 import { User } from '../model/user.model';
 import { UserService } from '../services/user.service';
+import { first } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-user-home',
-  templateUrl: './user-home.component.html',
-  styleUrls: ['./user-home.component.css']
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.css']
 })
-export class UserHomeComponent implements OnInit {
+export class AdminComponent implements OnInit {
 
     @Input('currentUser') currentUser: User;
     users: User[] = [];
@@ -27,10 +26,11 @@ export class UserHomeComponent implements OnInit {
         });
     }
 
-
     private loadAllUsers() {
         this.userService.getAll().pipe(first()).subscribe(users => { 
             this.users = users; 
         });
     }
+
+
 }

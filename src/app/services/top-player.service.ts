@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PlayerListComponent } from '../player-list/player-list.component';
+import { Player } from '../model/player.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,10 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class TopPlayerService {
 
-  topPlayer(list: PlayerListComponent){
+  topPlayer(players: Player[]){
     const observer =new Observable(o =>{
       o.next(
-        list.players.sort((a,b) => {
+        players.sort((a,b) => {
         if (a.overall < b.overall)
           return 1;
         else if(a.overall > b.overall)

@@ -1,9 +1,16 @@
-<div class="ml-3 p-3">
-        <h2 class="display-5"> {{team.name}}</h2>
-        <p><b>Location: </b> {{team.location}}</p>
-        <p><b>Offensive Rating: </b>{{team.offensiveRating}}</p>
-        <p><b>Defensive Rating: </b>{{team.defensiveRating}}</p>
-        <p><b>Overall: </b>{{team.overallRating}}</p>
-        <p><b>Players:</b></p>
-        <p *ngFor="let p of team.players">{{p.first_name}} {{p.last_name}}</p>
-    </div>
+<div class="Border ml-3 p-3">
+  <h2 class="display-5"> {{team.name}}</h2>
+  <div class="d-inline-block">
+    <p><b>Location: </b> {{team.location}}</p>
+    <p><b>Offensive Rating: </b>{{team.offensiveRating}}</p>
+    <p><b>Defensive Rating: </b>{{team.defensiveRating}}</p>
+    <p><b>Overall: </b>{{team.overallRating}}</p>
+  </div>
+  <div class="d-inline-block">
+    <p><b>Players:</b></p>
+    <p *ngFor="let p of team.players">{{p.first_name}} {{p.last_name}}</p>
+  </div>
+  <div>
+    <app-purchase-item [price]="100"></app-purchase-item>
+  </div>
+</div>

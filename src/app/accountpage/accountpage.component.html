@@ -1,0 +1,2 @@
+<app-admin [currentUser]="currUser" *ngIf="isAdmin()"></app-admin>
+<app-user-home [currentUser]="currUser" *ngIf="!isAdmin()"></app-user-home>

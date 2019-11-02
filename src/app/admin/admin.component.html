@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row"></div>
+    <div class="col-2"></div>
+    <div class="col-10">
+        <h2 class="display-3">Admin {{currentUser.first_name}}</h2>
+        <h2>Your the Admin!</h2>
+        <ol>
+            <li *ngFor="let user of users">
+                {{user.username}} -
+                <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+            </li>
+        </ol>
+        <p><a [routerLink]="['/login']">Logout</a></p>
+    </div>
+    <div class="col-2"></div>
+</div>

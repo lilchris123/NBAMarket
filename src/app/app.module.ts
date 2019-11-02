@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlayerComponent } from './player/player.component';
 import { TeamComponent } from './team/team.component';
-import { TopPlayersComponent } from './top-players/top-players.component';
 import { TopPlayerService } from './services/top-player.service';
 import { PlayerListComponent } from './player-list/player-list.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
@@ -26,13 +25,15 @@ import { RegisterComponent } from './register/register.component';
 import { AlertComponent } from './alert/alert.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { ConstantsService } from './services/constants.service';
+import { AdminComponent } from './admin/admin.component';
+import { PurchaseItemComponent } from './purchase-item/purchase-item.component';
+import { AccountpageComponent } from './accountpage/accountpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayerComponent,
     TeamComponent,
-    TopPlayersComponent,
     PlayerListComponent,
     PageNotFoundComponent,
     HomeComponent,
@@ -40,7 +41,10 @@ import { ConstantsService } from './services/constants.service';
     LoginComponent,
     RegisterComponent,
     AlertComponent,
-    UserHomeComponent
+    UserHomeComponent,
+    AdminComponent,
+    PurchaseItemComponent,
+    AccountpageComponent
   ],
   imports: [
     BrowserModule,
