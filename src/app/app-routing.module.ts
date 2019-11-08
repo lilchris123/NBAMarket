@@ -4,7 +4,6 @@ import { PlayerListComponent } from './player-list/player-list.component'
 import { TeamsComponent} from './teams/teams.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 import { HomeComponent } from './home/home.component';
-import { UserHomeComponent } from './user-home/user-home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './guards/auth.guard';

@@ -11,7 +11,7 @@ export class AccountpageComponent implements OnInit {
   currUser: User;
 
   constructor() { 
-     this.currUser = JSON.parse(localStorage.getItem('currentUser')).user;
+     this.currUser = JSON.parse(localStorage.getItem('currentUser'));
   }
 
 
@@ -19,7 +19,7 @@ export class AccountpageComponent implements OnInit {
   }
   
   isAdmin(){
-    if(this.currUser.role === "admin")
+    if(this.currUser.role === "ADMIN")
         return true;
     else
         return false;

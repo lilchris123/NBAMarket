@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../model/player.model';
 import { DataService } from '../services/data.service';
-import { TopPlayerService } from '../services/top-player.service'
+
 
 @Component({
   selector: 'app-player-list',
@@ -11,14 +11,14 @@ import { TopPlayerService } from '../services/top-player.service'
 export class PlayerListComponent implements OnInit {
   players: Player[];
   price: number;
-  constructor(private dataSv: DataService, private topPlayerSv: TopPlayerService) {}
+
+  playersPg: number=1;
+
+  constructor(private dataSv: DataService) {}
 
   ngOnInit() {
     this.price= 15;
     this.loadPlayers();
-    this.topPlayerSv.topPlayer(this.players).subscribe((topPlayer: Player[]) =>{
-      console.log(`${topPlayer[0].first_name} ${topPlayer[0].last_name}`)
-    });
   }
 
   loadPlayers(){
@@ -32,5 +32,6 @@ export class PlayerListComponent implements OnInit {
     }
     );
   }
+
 
 }

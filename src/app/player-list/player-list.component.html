@@ -1,6 +1,12 @@
-<div><h2 class="center-text my-5"> NBA Players</h2></div>
-<div class="fluid-container ml-3">
-        <div class="row">
-            <app-player class="mb-2" *ngFor= "let p of players" [player]= 'p'></app-player>
-        </div>
+<div>
+  <h2 class="center-text my-5"> NBA Players</h2>
+</div>
+
+<div class="fluid-container mx-4">
+  
+    <div class="row">
+    <app-player class="col-4 mb-2" *ngFor="let p of players | paginate: { itemsPerPage: 3, currentPage: playersPg, id: 'player' }" [player]='p'></app-player>
+    </div>
+
+  <pagination-controls (pageChange)="playersPg = $event" id="player"></pagination-controls>
 </div>

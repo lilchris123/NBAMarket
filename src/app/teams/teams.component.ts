@@ -9,7 +9,8 @@ import { DataService } from '../services/data.service'
 })
 export class TeamsComponent implements OnInit {
   teams: Team[];
-
+  teamPg: number=1;
+  
   constructor(private dataSrv: DataService) { }
 
   ngOnInit() {
