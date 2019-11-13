@@ -13,6 +13,8 @@ import { TopPlayerService } from './services/top-player.service';
 import { PlayerListComponent } from './player-list/player-list.component';
 import { DataService } from './services/data.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CartService } from './services/cart.service';
+import { CheckoutService } from './services/checkout.service';
 
 
 import { AuthGuard } from './guards/auth.guard';
@@ -29,9 +31,13 @@ import { AlertComponent } from './alert/alert.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { ConstantsService } from './services/constants.service';
 import { AdminComponent } from './admin/admin.component';
-import { PurchaseItemComponent } from './purchase-item/purchase-item.component';
+import { PurchasePlayerItemComponent } from './purchase-player-item/purchase-player-item.component';
+import { PurchaseTeamItemComponent } from './purchase-team-item/purchase-team-item.component';
 import { AccountpageComponent } from './accountpage/accountpage.component';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { CartItemComponent } from './cart/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -47,8 +53,12 @@ import { JwtHelperService } from '@auth0/angular-jwt';
     AlertComponent,
     UserHomeComponent,
     AdminComponent,
-    PurchaseItemComponent,
-    AccountpageComponent
+    PurchasePlayerItemComponent,
+    PurchaseTeamItemComponent,
+    AccountpageComponent,
+    CartComponent,
+    CheckoutComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,
@@ -68,8 +78,10 @@ import { JwtHelperService } from '@auth0/angular-jwt';
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     ConstantsService,
-    JwtHelperService
-  
+    JwtHelperService,
+    CartService,
+    CheckoutService
+    
   ],
   bootstrap: [AppComponent]
 })

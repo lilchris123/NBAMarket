@@ -11,9 +11,11 @@ export class PlayerComponent implements OnInit {
 @Input('player') player: Player;
 
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit() {
+    this.player.price= 1000* this.player.overall+ 20.5 * this.player.overall;
   }
 
 }

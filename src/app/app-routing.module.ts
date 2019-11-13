@@ -8,16 +8,20 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AccountpageComponent } from './accountpage/accountpage.component';
+import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   { path: 'account', component: AccountpageComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  {path: 'home', component: HomeComponent },
-  {path: 'players', component: PlayerListComponent },
-  {path: 'teams', component: TeamsComponent },
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: '**', component: PageNotFoundComponent}
+  { path: 'home', component: HomeComponent },
+  { path: 'players', component: PlayerListComponent },
+  { path: 'teams', component: TeamsComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'cart', component: CartComponent},
+  { path: 'checkout', component: CheckoutComponent},
+  { path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({

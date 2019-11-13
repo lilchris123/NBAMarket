@@ -11,6 +11,6 @@
     <p *ngFor="let p of team.players">{{p.first_name}} {{p.last_name}}</p>
   </div>
   <div>
-    <app-purchase-item [price]="100"></app-purchase-item>
+    <app-purchase-team-item [item]="team"></app-purchase-team-item>
   </div>
 </div>
