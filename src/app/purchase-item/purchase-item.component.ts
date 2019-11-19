@@ -4,11 +4,11 @@ import { Player } from '../model/player.model';
 import { Team } from '../model/team.model';
 
 @Component({
-  selector: 'app-purchase-player-item',
-  templateUrl: './purchase-player-item.component.html',
-  styleUrls: ['./purchase-player-item.component.css']
+  selector: 'app-purchase-item',
+  templateUrl: './purchase-item.component.html',
+  styleUrls: ['./purchase-item.component.css']
 })
-export class PurchasePlayerItemComponent implements OnInit {
+export class PurchaseItemComponent implements OnInit {
   
   @Input('item') item: Player;
   constructor(private cartService: CartService) {

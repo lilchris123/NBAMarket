@@ -1,0 +1,9 @@
+.cart-headers{
+    border-bottom: 2px solid black;
+}
+.cart{
+    width: 100%;
+}
+.total-border{
+    border-top: 2px solid black;
+}

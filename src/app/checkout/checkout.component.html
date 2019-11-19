@@ -1,1 +1,70 @@
-<p>checkout works!</p>
+<div class="main container">
+        <h3 class="display-4 mt-4 d-flex justify-content-center">Checkout</h3>
+        <form [formGroup]="checkoutForm" class="px-3" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" formControlName="name" class="form-control" id="name" placeholder="Name" maxlength="50"
+                  [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                  <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors.required">Name is required</div>
+                </div>
+                </div>
+        
+                <div class="form-group">
+                  <label for="address">Address:</label>
+                  <input type="text" formControlName="address" class="form-control" id="address" placeholder="Address" maxlength="150"
+                  [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
+                  <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                      <div *ngIf="f.address.required">Address is required</div>
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                  <label for="cardnumber">Card Number:</label>
+                  <input type="text" formControlName="cardnumber" class="form-control" id="cardnumber" placeholder="#### #### #### ####" maxlength="16"
+                  [ngClass]="{ 'is-invalid': submitted && f.cardnumber.errors }">
+                  <div *ngIf="submitted && f.cardnumber.errors" class="invalid-feedback">
+                      <div *ngIf="f.cardnumber.errors.required">Card number is required</div>
+                      <div *ngIf="!f.cardnumber.errors.required && f.cardnumber.errors">Card number must be 16 digits</div>
+                    </div>
+                </div>
+        
+                <div class="form-group">
+                  <label for="securitycode">Sec:</label>
+                  <input type="text" formControlName="securitycode" class="form-control" id="securitycode" placeholder="###" maxlength="3"
+                  [ngClass]="{ 'is-invalid': submitted && f.securitycode.errors }">
+                  <div *ngIf="submitted && f.securitycode.errors" class="invalid-feedback">
+                      <div *ngIf="f.securitycode.errors.required">Security code is required</div>
+                      <div *ngIf="!f.securitycode.errors.required && f.securitycode.errors">Security code must be 3 digits</div>
+                    </div>
+                </div>
+                
+                  <div class="form-group">
+                    <label for="exp_mm">Expire Date:</label>
+                    <input type="text" formControlName="exp_mm" class="form-control" id="exp_mm" placeholder="mm" maxlength="2"
+                    [ngClass]="{ 'is-invalid': submitted && f.exp_mm.errors }">
+                    <div *ngIf="submitted && f.exp_mm.errors" class="invalid-feedback">
+                      <div *ngIf="f.exp_mm.errors.required">Expiration month is required</div>
+                      <div *ngIf="!f.exp_mm.errors.required && f.exp_mm.errors">Expiration month must be 2 digits</div>
+                    </div>
+        
+                    <label class="sr-only" for="exp_yy">Expire Date:</label>
+                    <input type="text" formControlName="exp_yy" class="form-control" id="exp_yy" placeholder="yy" maxlength="2"
+                    [ngClass]="{ 'is-invalid': submitted && f.exp_yy.errors }">
+                    <div *ngIf="submitted && f.exp_yy.errors" class="invalid-feedback">
+                        <div *ngIf="f.exp_yy.errors.required">Expiration year is required</div>
+                        <div *ngIf="!f.exp_yy.errors.required && f.exp_yy.errors">Expiration year must be 2 digits</div>
+                    </div>
+                  </div>
+                  <div class="total-border">
+                        <div class="d-flex justify-content-end">
+                            <h4 class="mr-5">Items: {{cart.quantity}}</h4>
+                            <h4>Total: {{cart.total | currency}}</h4>
+                        </div>
+                </div>
+                <div class="form-group d-flex justify-content-center mt-2">
+                        <button routerLink="/cart" class="btn btn-secondary mr-4">Cart</button>
+                    <button class="btn btn-primary px-5">Submit Order</button>
+                </div>
+              </form>
+    </div>

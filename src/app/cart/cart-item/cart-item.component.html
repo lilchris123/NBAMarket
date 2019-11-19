@@ -1,1 +1,14 @@
-<p>cart-item works!</p>
+<div class="cartItem mb-4">
+  <div class="row">
+    <div class="col-7 row">
+      <div class="img-border col"></div>
+      <div class="col-7">
+          <p>{{cartItem.item.first_name}} {{cartItem.item.last_name}}</p>
+          <p>{{cartItem.item.team_name}} {{cartItem.item.position}}</p>
+          <p>Overall: <b>{{cartItem.item.overall}}</b></p>
+        </div>
+    </div>
+    <p class="col"><b>{{cartItem.quantity}}</b></p>
+    <p class="col"><b>{{cartItem.item.price | currency}}</b></p>
+  </div>
+</div>

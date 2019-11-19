@@ -23,7 +23,7 @@ export class CartService {
     }
   }
 
-  //add item to our session cart
+  //add player item to our session cart
   addToCart(addedItem: any){
     
     this.cart = this.getCart();

@@ -1,0 +1,10 @@
+.cartItem{
+    background-color: lightgrey;
+    border: 0px solid gray;
+
+}
+.img-border{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+}

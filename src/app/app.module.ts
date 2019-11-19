@@ -31,13 +31,14 @@ import { AlertComponent } from './alert/alert.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { ConstantsService } from './services/constants.service';
 import { AdminComponent } from './admin/admin.component';
-import { PurchasePlayerItemComponent } from './purchase-player-item/purchase-player-item.component';
+import { PurchaseItemComponent } from './purchase-item/purchase-item.component';
 import { PurchaseTeamItemComponent } from './purchase-team-item/purchase-team-item.component';
 import { AccountpageComponent } from './accountpage/accountpage.component';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -53,12 +54,13 @@ import { CartItemComponent } from './cart/cart-item/cart-item.component';
     AlertComponent,
     UserHomeComponent,
     AdminComponent,
-    PurchasePlayerItemComponent,
+    PurchaseItemComponent,
     PurchaseTeamItemComponent,
     AccountpageComponent,
     CartComponent,
     CheckoutComponent,
-    CartItemComponent
+    CartItemComponent,
+    OrderConfirmationComponent
   ],
   imports: [
     BrowserModule,

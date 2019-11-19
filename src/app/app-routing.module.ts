@@ -10,6 +10,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { AccountpageComponent } from './accountpage/accountpage.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderConfirmationComponent} from './order-confirmation/order-confirmation.component';
 
 const routes: Routes = [
   { path: 'account', component: AccountpageComponent, canActivate: [AuthGuard] },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'cart', component: CartComponent},
   { path: 'checkout', component: CheckoutComponent},
+  { path: 'confirmation', component: OrderConfirmationComponent},
   { path: '**', component: PageNotFoundComponent}
 ];
 
