@@ -15,6 +15,7 @@ import { DataService } from './services/data.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CartService } from './services/cart.service';
 import { CheckoutService } from './services/checkout.service';
+import { OrderService } from './services/order.service';
 
 
 import { AuthGuard } from './guards/auth.guard';
@@ -82,7 +83,8 @@ import { OrderConfirmationComponent } from './order-confirmation/order-confirmat
     ConstantsService,
     JwtHelperService,
     CartService,
-    CheckoutService
+    CheckoutService,
+    OrderService
     
   ],
   bootstrap: [AppComponent]

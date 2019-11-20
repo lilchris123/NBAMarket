@@ -1,6 +1,10 @@
 .OrderContainer{
-    border: 2px solid;
-    width: 100%;
+    border: 1px solid;
+    
+}
+.OrderItem-container{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
 
 .item{

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Player } from '../model/player.model';
-import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { ConstantsService} from './constants.service';
 
 
@@ -8,7 +7,6 @@ import { ConstantsService} from './constants.service';
   providedIn: 'root'
 })
 export class DataService {
-  players: Player[];
 
   constructor(private http: HttpClient, private constants: ConstantsService) { 
   }

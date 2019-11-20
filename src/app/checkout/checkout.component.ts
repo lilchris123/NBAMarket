@@ -27,6 +27,7 @@ export class CheckoutComponent implements OnInit {
     this.getCartSession();
     this.checkoutForm = this.formBuilder.group({
       name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.pattern('[a-zA-z]{5,}[0-9]*@[a-zA-Z]{2,}\.com')]],
       address: ['', Validators.required],
       cardnumber: ['', [Validators.required, Validators.pattern('[0-9]{16}')]],
       securitycode: ['', [Validators.required,Validators.pattern('[0-9]{3}')]],
@@ -39,8 +40,11 @@ export class CheckoutComponent implements OnInit {
    get f() { return this.checkoutForm.controls; }
 
    makeOrder(formData: any): Order{
+     let currUser= JSON.parse(localStorage.getItem("currentUser"));
      let order = new Order();
+     order.userId= currUser != null ? currUser.id : null;
      order.user_name= formData.name;
+     order.user_email= formData.email;
      order.user_address= formData.address;
      order.user_card_no= formData.cardnumber;
      order.user_card_sec= formData.securitycode;
@@ -65,6 +69,7 @@ export class CheckoutComponent implements OnInit {
               data => {
                 console.log(data);
                   this.alertService.success('Order successfull', true);
+                  this.cartService.removeAll();
                   this.router.navigate(['/confirmation']);
               },
               error => {
