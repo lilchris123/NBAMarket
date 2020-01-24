@@ -6,6 +6,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatTableModule} from '@angular/material';
 import { NgxPaginationModule } from 'ngx-pagination'
 import { AppRoutingModule } from './app-routing.module';
+import { AuthenticationModule } from './authentication/authentication.module';
 import { AppComponent } from './app.component';
 import { PlayerComponent } from './player/player.component';
 import { TeamComponent } from './team/team.component';
@@ -26,8 +27,6 @@ import { AuthenticationService } from './services/authentication.service';
 import { UserService } from './services/user.service';
 import { HomeComponent } from './home/home.component';
 import { TeamsComponent } from './teams/teams.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { AlertComponent } from './alert/alert.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { ConstantsService } from './services/constants.service';
@@ -50,8 +49,6 @@ import { OrderConfirmationComponent } from './order-confirmation/order-confirmat
     PageNotFoundComponent,
     HomeComponent,
     TeamsComponent,
-    LoginComponent,
-    RegisterComponent,
     AlertComponent,
     UserHomeComponent,
     AdminComponent,
@@ -64,14 +61,14 @@ import { OrderConfirmationComponent } from './order-confirmation/order-confirmat
     OrderConfirmationComponent
   ],
   imports: [
+    AuthenticationModule,
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
-    NgxPaginationModule
-    
+    NgxPaginationModule,
   ],
   providers: [TopPlayerService, PlayerListComponent, DataService,
     AuthGuard,
