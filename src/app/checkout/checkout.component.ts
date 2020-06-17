@@ -38,7 +38,7 @@ export class CheckoutComponent implements OnInit {
 
    // convenience getter for easy access to form fields
    get f() { return this.checkoutForm.controls; }
-   get address() { return this.checkoutForm.get('address'); }
+   //get address() { return this.checkoutForm.get('address'); }
 
    makeOrder(formData: any): Order{
      let currUser= JSON.parse(localStorage.getItem("currentUser"));
