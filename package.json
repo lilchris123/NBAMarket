@@ -1,13 +1,14 @@
 {
-  "name": "my-project",
+  "name": "NBAMarket",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~8.2.9",
     "@angular/router": "~8.2.9",
     "@auth0/angular-jwt": "^3.0.1",
+    "express": "^4.17.1",
     "hammerjs": "^2.0.8",
     "jwt-decode": "^2.2.0",
     "ngx-pagination": "^4.1.0",
